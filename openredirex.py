@@ -152,6 +152,7 @@ if __name__ == "__main__":
     parser.add_argument('-p', '--payloads', help='file of payloads', required=False)
     parser.add_argument('-k', '--keyword', help='keyword in urls to replace with payload (default is FUZZ)', default="FUZZ")
     parser.add_argument('-c', '--concurrency', help='number of concurrent tasks (default is 100)', type=int, default=100)
+    parser.add_argument('-u', '--url', required=True, help='Specify the target URL')
     args = parser.parse_args()
     try:
         asyncio.run(main(args))
